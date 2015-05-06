@@ -4,14 +4,14 @@ describe "Static pages" do
 
   describe "Home page" do
 
-    it "should have the content 'Sample App'" do
+    it "should have the h1 'Sample App'" do
       visit root_path
       expect(page).to have_content('Sample App')
     end
 
     it "should have the base title" do
       visit root_path
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App ")
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App")
     end
 
     it "should not have a custom page title" do
@@ -20,9 +20,9 @@ describe "Static pages" do
     end
   end
 
-    describe "Help page" do
+  describe "Help page" do
 
-    it "should have the content 'Help'" do
+    it "should have the h1 'Help'" do
       visit help_path
       expect(page).to have_content('Help')
     end
@@ -33,17 +33,17 @@ describe "Static pages" do
     end
   end
 
-    describe "About page" do
+  describe "About page" do
 
-    it "should have the content 'About Us'" do
+    it "should have the h1 'About Us'" do
       visit about_path
       expect(page).to have_content('About Us')
     end
 
-        it "should have the title 'About Us'" do
+    it "should have the title 'About Us'" do
       visit about_path
       expect(page).to have_title("Ruby on Rails Tutorial Sample App | About Us")
-    end    
+    end
   end
 
   describe "Contact page" do
